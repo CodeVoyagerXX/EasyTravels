@@ -1,23 +1,23 @@
-EasyTravels
+# EasyTravels
+
 A full-featured tour and travel booking platform with integrated frontend and backend services.
 
-🚀 Features
-User authentication (sign up, log in, log out)
+---
 
-Protected routes, ensuring only authenticated users can access key pages
+## 🚀 Features
 
-Trip browsing and booking—explore available tours, view details, and book
+* **User authentication** (sign up, log in, log out)
+* **Protected routes**, ensuring only authenticated users can access key pages
+* **Trip browsing and booking**—explore available tours, view details, and book
+* **MongoDB-based backend** for storing users, tours, and bookings
+* **Modern frontend** with responsive design and dynamic UI
+* **Modular code structure** separating client, server, and shared logic
 
-MongoDB-based backend for storing users, tours, and bookings
+---
 
-Modern frontend with responsive design and dynamic UI
+## 📂 Project Structure
 
-Modular code structure separating client, server, and shared logic
-
-🗂 Project Structure
-pgsql
-Copy
-Edit
+```
 EasyTravels/
 ├── backend/          # Express.js or Java-based API server
 │   ├── src/
@@ -33,122 +33,126 @@ EasyTravels/
 ├── database/         # MongoDB initialization scripts (optional)
 ├── .gitignore
 └── README.md
-🧱 Prerequisites
-Node.js (v14+)
+```
 
-MongoDB (v4+) or cloud-hosted MongoDB
+---
 
-(If using Java backend) Java 11+ and Maven
+## 🧱 Prerequisites
 
-⬇️ Installation & Setup
-Clone the repo:
+* Node.js (v14+)
+* MongoDB (v4+) or cloud-hosted MongoDB
+* (If using Java backend) Java 11+ and Maven
 
-bash
-Copy
-Edit
-git clone https://github.com/CodeVoyagerXX/EasyTravels.git
-cd EasyTravels
-Install backend dependencies:
+---
 
-bash
-Copy
-Edit
-cd backend
-npm install             # or mvn install if Java/Maven
-Install frontend dependencies:
+## ⬇️ Installation & Setup
 
-bash
-Copy
-Edit
-cd ../frontend
-npm install
-Configure environment variables:
+1. **Clone** the repo:
 
-Create a .env in backend/:
+   ```bash
+   git clone https://github.com/CodeVoyagerXX/EasyTravels.git
+   cd EasyTravels
+   ```
 
-dotenv
-Copy
-Edit
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/easytravels
-JWT_SECRET=your_jwt_secret
-Adjust ports or secrets as needed.
+2. **Install backend dependencies:**
 
-Start services:
+   ```bash
+   cd backend
+   npm install             # or mvn install if Java/Maven
+   ```
 
-bash
-Copy
-Edit
-# Backend
-cd backend && npm start
+3. **Install frontend dependencies:**
 
-# Frontend (in separate terminal)
-cd frontend && npm start
-Open in browser:
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-Frontend: http://localhost:3000
+4. **Configure environment variables:**
 
-API (optional): http://localhost:5000/api
+   Create a `.env` in `backend/`:
 
-🧪 Development
-Frontend:
+   ```dotenv
+   PORT=5000
+   MONGO_URI=mongodb://localhost:27017/easytravels
+   JWT_SECRET=your_jwt_secret
+   ```
 
-npm run start: run dev server with hot reload
+   Adjust ports or secrets as needed.
 
-npm run build: production-ready build
+5. **Start services:**
 
-Backend:
+   ```bash
+   # Backend
+   cd backend && npm start
 
-npm run dev: development mode with auto-reload (via nodemon)
+   # Frontend (in separate terminal)
+   cd frontend && npm start
+   ```
 
-npm test: run unit/integration tests
+6. **Open in browser:**
 
-🔐 Auth Flow
-Users sign up or log in via frontend forms.
+   * Frontend: `http://localhost:3000`
+   * API (optional): `http://localhost:5000/api`
 
-Backend issues JWT on successful login.
+---
 
-Protected endpoints validate token before data access.
+## 🧪 Development
 
-Frontend stores token (localStorage or cookies) to maintain session.
+* Frontend:
 
-📦 Technologies Used
-Frontend: React or Angular (or vanilla JS), CSS framework
+  * `npm run start`: run dev server with hot reload
+  * `npm run build`: production-ready build
+* Backend:
 
-Backend: Express.js (or Spring Boot if Java)
+  * `npm run dev`: development mode with auto-reload (via nodemon)
+  * `npm test`: run unit/integration tests
 
-Database: MongoDB for storing user data, tours, bookings
+---
 
-Auth: JWT + bcrypt for secure password hashing
+## 🔐 Auth Flow
 
-🌐 API Endpoints
-POST /api/auth/signup – create a new user
+1. Users sign up or log in via frontend forms.
+2. Backend issues JWT on successful login.
+3. Protected endpoints validate token before data access.
+4. Frontend stores token (localStorage or cookies) to maintain session.
 
-POST /api/auth/login – obtain JWT
+---
 
-GET /api/tours – list all tours
+## 📦 Technologies Used
 
-GET /api/tours/:id – tour details
+* **Frontend**: React or Angular (or vanilla JS), CSS framework
+* **Backend**: Express.js (or Spring Boot if Java)
+* **Database**: MongoDB for storing user data, tours, bookings
+* **Auth**: JWT + bcrypt for secure password hashing
 
-POST /api/bookings – create a new booking
+---
 
-GET /api/bookings – view user's bookings (protected)
+## 🌐 API Endpoints
 
-(Update this section to match your actual endpoints and HTTP payloads.)
+* `POST /api/auth/signup` – create a new user
+* `POST /api/auth/login` – obtain JWT
+* `GET /api/tours` – list all tours
+* `GET /api/tours/:id` – tour details
+* `POST /api/bookings` – create a new booking
+* `GET /api/bookings` – view user's bookings (protected)
 
-♻️ Contributing
+*(Update this section to match your actual endpoints and HTTP payloads.)*
+
+---
+
+## ♻️ Contributing
+
 Contributions are welcome! To propose changes:
 
-Fork the repository
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m "Add feature"`)
+4. Push to your fork (`git push origin feature-name`)
+5. Open a Pull Request—make sure to document and test new features
 
-Create a feature branch (git checkout -b feature-name)
+---
 
-Commit your changes (git commit -m "Add feature")
+## 🗜️ License
 
-Push to your fork (git push origin feature-name)
-
-Open a Pull Request—make sure to document and test new features
-
-🧭 License
-Distributed under the MIT License. See LICENSE for details.
-
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
